@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-directives',
   imports: [],
   templateUrl: './directives.html',
-  styleUrl: './directives.scss'
+  styleUrl: './directives.scss',
 })
-export class Directives {
-
-}
+export class Directives {}
