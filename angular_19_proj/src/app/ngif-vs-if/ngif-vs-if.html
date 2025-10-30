@@ -1,0 +1,26 @@
+<div class="row text-center">
+  <div class="col-12 m-3">
+    <h1>*ngIf vs. if()</h1>
+  </div>
+</div>
+
+<div class="row text-center">
+  <div class="col-4 m-3">
+    <div (click)="onClick()"><input type="checkbox" name="" id="" /> Terms and conditions</div>
+    <div *ngIf="isChecked">
+      <button class="btn btn-success">Submit</button>
+    </div>
+  </div>
+  <div class="col-4 m-3">
+    <div class="m-2" *ngIf="isInputBox">
+      <input type="text" value="BEBSLearn" />
+    </div>
+    <button (click)="showField()" class="btn btn-primary m-2">Show</button>
+
+    <button (click)="hideField()" class="btn btn-danger">Hide</button>
+  </div>
+
+  <div class="col-4 m-3">
+    <h2>ngIf</h2>
+  </div>
+</div>
