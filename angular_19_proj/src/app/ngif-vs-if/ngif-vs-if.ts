@@ -18,7 +18,7 @@ export class NgifVsIf {
 
   showField() {
     this.isInputBox = true;
-  }
+  } 
 
   hideField() {
     this.isInputBox = false;

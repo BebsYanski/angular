@@ -1,26 +1,26 @@
 <div align="center">
-    <h4>One way Data Binding</h4>
-    <div>
-        <p><b>1. Interpolation</b></p>
-        <p>
-            <strong>{{ topic }}</strong> from {{ name }}
-        </p>
-    </div>
+  <h4>One way Data Binding</h4>
+  <div>
+    <p><b>1. Interpolation</b></p>
+    <p>
+      <strong>{{ topic }}</strong> from {{ name }}
+    </p>
+  </div>
 
-    <div>
-        <p><b>2. Property Binding</b></p>
-        <input type="text" name="" [value]="topic" id="" />
-        <img [src]="image" [alt]="name" />
-    </div>
+  <div>
+    <p><b>2. Property Binding</b></p>
+    <input type="text" name="" [value]="topic" id="" />
+    <img [src]="image" [alt]="name" />
+  </div>
 
-    <div>
-        <p><b>3. Event Binding</b></p>
-        <input type="text" name="" [placeholder]="topic" (input)="topic = $event.target.value" id="" />
-        <p>{{ topic }}</p>
-        <button type="button" (click)="topic = 'Event Binding'">Click</button>
-        <button type="button" (click)="onSave()">Save</button>
+  <div>
+    <p><b>3. Event Binding</b></p>
+    <input type="text" name="" [placeholder]="topic" (input)="topic = $event.target.value" id="" />
+    <p>{{ topic }}</p>
+    <button type="button" (click)="topic = 'Event Binding'">Click</button>
+    <button type="button" (click)="onSave()">Save</button>
 
-        <select (change)="onChange()" name="" id="">
+    <select (change)="onChange()" name="" id="">
       <option value="Country">Country</option>
       <option value="India">India</option>
       <option value="Cameroon">Cameroon</option>
@@ -32,8 +32,8 @@
       <option value="Britain">Britain</option>
       <option value="canada">canada</option>
     </select>
-    </div>
+  </div>
 
-    <h4>Two Way Data Binding</h4>
-    <div><input type="text" [(ngModel)]="random" /> {{ random }}</div>
+  <h4>Two Way Data Binding</h4>
+  <div><input type="text" [(ngModel)]="random" /> {{ random }}</div>
 </div>
