@@ -5,22 +5,59 @@
 </div>
 
 <div class="row text-center">
-  <div class="col-4 m-3">
+  <div class="col-4">
     <div (click)="onClick()"><input type="checkbox" name="" id="" /> Terms and conditions</div>
-    <div *ngIf="isChecked">
+    <!-- <div *ngIf="isChecked">
+      <button class="btn btn-success">Submit</button>
+    </div> -->
+    @if(isChecked) {
+    <div class="m-2">
       <button class="btn btn-success">Submit</button>
     </div>
+    }
+    <div class="m-2" *ngIf="!isChecked">
+      <button class="btn btn-danger">Submit</button>
+    </div>
   </div>
-  <div class="col-4 m-3">
-    <div class="m-2" *ngIf="isInputBox">
+  <div class="col-4">
+    <!-- <div class="m-2" *ngIf="isInputBox">
       <input type="text" value="BEBSLearn" />
+    </div> -->
+    @if(isInputBox) {
+    <div class="m-2">
+      <input type="text" value="BEBSLearn" />
+    </div>
+    }
+    <div class="m-2" *ngIf="!isInputBox">
+      <h3>Input box is hidden</h3>
     </div>
     <button (click)="showField()" class="btn btn-primary m-2">Show</button>
 
     <button (click)="hideField()" class="btn btn-danger">Hide</button>
   </div>
 
-  <div class="col-4 m-3">
-    <h2>ngIf</h2>
+  <div class="col-4">
+    <div>
+      <input type="text" class="m-1" [(ngModel)]="input1" />
+      <input type="text" class="m-1" [(ngModel)]="input2" />
+    </div>
+    @if(input1 && input2 && input1 == input2) {
+    <div class="m-2">
+      <h4>Both are equal: {{ input1 == input2 }}</h4>
+    </div>
+    } @else if(input1 && input2 && input1 != input2) {
+    <div class="m-2">
+      <h4>Both are not equal: {{ input1 != input2 }}</h4>
+    </div>
+    }@else {
+    <h4>Add something in both input fields</h4>
+    }
+
+    <!-- <div class="m-2" *ngIf="input1 && input2 && input1 == input2">
+      <h4>Both are equal: {{ input1 == input2 }}</h4>
+    </div>
+    <div class="m-2" *ngIf="input1 && input2 && input1 != input2">
+      <h4>Both are not equal: {{ input1 != input2 }}</h4>
+    </div> -->
   </div>
 </div>
