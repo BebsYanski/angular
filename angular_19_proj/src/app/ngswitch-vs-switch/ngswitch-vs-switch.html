@@ -1,0 +1,56 @@
+<div class="row text-center">
+  <div class="col-12 m-3">
+    <h1>*ngSwitch vs. switch()</h1>
+  </div>
+</div>
+
+<div class="row text-center">
+  <div class="col-4">
+    <div>
+      <input type="text" class="m-1" [(ngModel)]="input1" />
+      <input type="text" class="m-1" [(ngModel)]="input2" />
+    </div>
+    <div class="m-2">
+      <h4>Both are equal: {{ input1 == input2 }}</h4>
+    </div>
+  </div>
+  <div class="col-4">
+    <div>
+      <input type="text" class="m-1" [(ngModel)]="input1" />
+      <input type="text" class="m-1" [(ngModel)]="input2" />
+    </div>
+    <div class="m-2">
+      <h4>Both are not equal: {{ input1 != input2 }}</h4>
+    </div>
+  </div>
+</div>
+<hr />
+
+<div class="row text-center">
+  <div class="col-12">
+    <button (click)="set(1)" type="button" class="btn btn-success m-1">1st Grade</button>
+    <button (click)="set(2)" type="button" class="btn btn-primary m-1">2nd Grade</button>
+    <button (click)="set(3)" type="button" class="btn btn-warning m-1">3rd Grade</button>
+    <button (click)="set(4)" type="button" class="btn btn-danger m-1">4th Grade</button>
+  </div>
+  <!-- <div class="col-12" [ngSwitch]="grade">
+        <div *ngSwitchCase="1">Congrats! 1st Grade</div>
+        <div *ngSwitchCase="2">2nd Grade</div>
+        <div *ngSwitchCase="3">3rd Grade</div>
+        <div *ngSwitchCase="4">4th Grade</div>
+    </div> -->
+  <div class="col-12">
+    @switch (grade) { @case (1) {
+    <div>Congrats! 1st Grade</div>
+    } @case (2) {
+    <div>2nd Grade</div>
+    } @case (3) {
+    <div>3rd Grade</div>
+    } @case (4) {
+    <div>4th Grade</div>
+    } @default { No Result } }
+  </div>
+  <!-- <div class="col-4"></div>
+  <div class="col-4"></div>
+  <div class="col-4"></div> -->
+</div>

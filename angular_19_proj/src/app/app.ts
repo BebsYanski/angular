@@ -5,6 +5,7 @@ import { DataBinding } from './data-binding/data-binding';
 import { Directives } from './directives/directives';
 import { NgifVsIf } from './ngif-vs-if/ngif-vs-if';
 import { NgforVsFor } from './ngfor-vs-for/ngfor-vs-for';
+import { NgswitchVsSwitch } from './ngswitch-vs-switch/ngswitch-vs-switch';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { NgforVsFor } from './ngfor-vs-for/ngfor-vs-for';
     // DataBinding,
     // Directives,
     // NgifVsIf,
-    NgforVsFor,
+    // NgforVsFor,
+    NgswitchVsSwitch,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
