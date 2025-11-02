@@ -1,0 +1,112 @@
+<h3 class="text-center">*ngFor vs. for()</h3>
+
+<details>
+  <summary>
+    <h4>*ngFor Example:</h4>
+  </summary>
+  <div>
+    <p>
+      In the above example, we use *ngFor to iterate over the employees array and display each
+      employee's details in a list item.
+    </p>
+    <p>
+      Using *ngFor is more concise and easier to read compared to using a traditional for loop in
+      the component's TypeScript file.
+    </p>
+    <p>
+      Additionally, *ngFor automatically handles change detection and updates the DOM when the data
+      changes, making it more efficient for dynamic lists.
+    </p>
+    <p>
+      In contrast, using a for loop would require manual DOM manipulation and change detection,
+      which can lead to more complex and error-prone code.
+    </p>
+  </div>
+</details>
+
+<div class="row m-3">
+  <div class="col-3">
+    <select name="" id="" class="p-2">
+      <!-- <option [value]="emp.name" *ngFor="let emp of employees">
+        {{ emp.name }} - {{ emp.position }}
+      </option> -->
+      @for(emp of employees; track emp;) {
+      <option [value]="emp.name">{{ emp.name }} - {{ emp.position }}</option>
+      }
+    </select>
+  </div>
+  <div class="col-3">
+    <ul>
+      <!-- <li *ngFor="let emp of employees">{{ emp.name }} - {{ emp.position }}</li> -->
+      @for(emp of employees; track emp;) {
+      <li>{{ emp.name }} - {{ emp.position }}</li>
+      }
+    </ul>
+  </div>
+  <div class="col-3">
+    <table class="table table-light">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr *ngFor="let emp of employees">
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.position }}</td>
+          <td>{{ emp.age }}</td>
+        </tr> -->
+        @for(emp of employees; track emp;) {
+        <tr>
+          <td>{{ emp.name }}</td>
+          <td>{{ emp.position }}</td>
+          <td>{{ emp.age }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <div class="col-3">
+    <ul>
+      <!-- <li *ngFor="let company of companyList">
+        {{ company }}
+      </li> -->
+      @for(company of companyList; track company; let f=$first, l=$last, i=$index, e=$even, o=$odd,
+      c=$count;) { @if(f) {
+      <li class="text-primary">First Company: {{ company }} (Index: {{ i }})</li>
+      } @else if(l) {
+      <li class="text-danger">Last Company: {{ company }} (Index: {{ i }})</li>
+      } @else {
+      <li>
+        {{ company }} (Index: {{ i }}) - Even: {{ e }} - Odd: {{ o }} - Total Companies: {{ c }}
+      </li>
+      } } @empty {
+      <p>No Companies found</p>
+      }
+    </ul>
+  </div>
+</div>
+
+<hr />
+
+<div class="row m-3">
+  <div class="col-3">
+    <div *ngFor="let comp of companyList">
+      {{ comp }}
+    </div>
+  </div>
+  <div class="col-3">
+    <div *ngFor="let emp of employees">
+      <p>Name: {{ emp.name }}</p>
+      <p>Position: {{ emp.position }}</p>
+      <p>Age: {{ emp.age }}</p>
+      <hr />
+    </div>
+  </div>
+  <div class="col-3">
+    <button *ngFor="let comp of companyList" class="btn btn-primary m-2">{{ comp }}</button>
+  </div>
+  <div class="col-3"></div>
+</div>
