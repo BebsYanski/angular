@@ -4,7 +4,7 @@
   </div>
 </div>
 <div class="row text-center pt-2">
-  <h3><u>Examples of Attribute Directives &mdash; ngClass</u></h3>
+  <h3 class="mb-5"><u>Examples of Attribute Directives &mdash; ngClass</u></h3>
 
   <div class="col-4">
     <h4>ngClass Example</h4>
@@ -14,6 +14,35 @@
       click
     </button>
   </div>
-  <div class="col-4"></div>
-  <div class="col-4"></div>
+  <div class="col-4">
+    <h3 [ngClass]="isTextGreen ? 'text-success' : 'text-danger'">Hello</h3>
+    <input type="checkbox" [(ngModel)]="isTextGreen" name="" id="" /> Change Color
+  </div>
+  <div class="col-4">
+    <h3 [ngClass]="userClass">This is a good example</h3>
+    <br />
+    <input type="text" [(ngModel)]="userClass" />
+  </div>
+</div>
+<hr />
+
+<div class="row text-center pt-2">
+  <h3 class="mb-5"><u>Examples of Attribute Directives &mdash; ngStyle</u></h3>
+
+  <div class="col-4">
+    <h3 [style]="{ color: styleColor, 'font-weight': 'bold' }">
+      This is the first example of ngStyle
+    </h3>
+    <br />
+    <button class="btn btn-warning m-2" (click)="updateColor('orange')">Change to Orange</button>
+    <button class="btn btn-primary m-2" (click)="updateColor('red')">Change to Red</button>
+  </div>
+  <div class="col-4">
+    <h3 [ngStyle]="{ color: isTextBlue ? 'blue' : 'magenta' }">Hello</h3>
+    <input type="checkbox" [(ngModel)]="isTextBlue" name="" id="" /> Change Color
+  </div>
+  <div class="col-4">
+    <h3 [ngStyle]="customClass">This is a good example</h3>
+    <br />
+  </div>
 </div>
