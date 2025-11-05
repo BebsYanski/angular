@@ -7,6 +7,7 @@ import { NgifVsIf } from './ngif-vs-if/ngif-vs-if';
 import { NgforVsFor } from './ngfor-vs-for/ngfor-vs-for';
 import { NgswitchVsSwitch } from './ngswitch-vs-switch/ngswitch-vs-switch';
 import { AttributeDirectives } from './attribute-directives/attribute-directives';
+import { Signals } from './signals/signals';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { AttributeDirectives } from './attribute-directives/attribute-directives
     // NgifVsIf,
     // NgforVsFor,
     // NgswitchVsSwitch,
-    AttributeDirectives,
+    // AttributeDirectives,
+    Signals
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
