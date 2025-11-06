@@ -8,6 +8,7 @@ import { NgforVsFor } from './ngfor-vs-for/ngfor-vs-for';
 import { NgswitchVsSwitch } from './ngswitch-vs-switch/ngswitch-vs-switch';
 import { AttributeDirectives } from './attribute-directives/attribute-directives';
 import { Signals } from './signals/signals';
+import { LinkedSignal } from './linked-signal/linked-signal';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ import { Signals } from './signals/signals';
     // NgforVsFor,
     // NgswitchVsSwitch,
     // AttributeDirectives,
-    Signals
+    // Signals
+    // LinkedSignal
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
