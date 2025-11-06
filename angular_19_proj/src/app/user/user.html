@@ -1,2 +1,18 @@
-<p>user works!</p>
-<p>Hello</p>
+<div class="container d-flex justify-content-center mt-5" style="height: 100%">
+  <form action="/structural-directives" class="text-center w-50 p-5 border border-secondary">
+    <h2>Welcome to Login</h2>
+    <br />
+    <div class="form-group">
+      <label for="username ">Username:</label>
+      <input class="form-control" type="text" id="username" placeholder="Enter username" />
+    </div>
+    <br /><br />
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input class="form-control" type="password" name="" id="password" placeholder="Password" />
+    </div>
+    <br /><br />
+    <!-- <button type="submit" class="btn btn-primary" routerLink="/structural-directives">Login</button> -->
+    <button type="submit" class="btn btn-primary" (click)="loginData()">Login</button>
+  </form>
+</div>
