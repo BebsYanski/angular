@@ -71,6 +71,6 @@ export class User
   loginData() {
     // User Verification Logic
     // this.router.navigateByUrl('structural-directives');
-    this.router.navigate(['structural-directives']);
+    this.router.navigate(['built-in-pipes']);
   }
 }

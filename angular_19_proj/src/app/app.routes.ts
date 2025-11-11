@@ -4,6 +4,7 @@ import { DataBinding } from './data-binding/data-binding';
 import { Directives } from './directives/directives';
 import { AttributeDirectives } from './attribute-directives/attribute-directives';
 import { PageNotFound } from './page-not-found/page-not-found';
+import { BuiltInPipes } from './built-in-pipes/built-in-pipes';
 
 export const routes: Routes = [
   {
@@ -21,8 +22,8 @@ export const routes: Routes = [
     component: DataBinding,
   },
   {
-    path: 'structural-directives',
-    component: Directives,
+    path: 'built-in-pipes',
+    component: BuiltInPipes,
   },
   {
     path: 'attribute-directives',
