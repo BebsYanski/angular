@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-built-in-pipes',
@@ -20,4 +21,11 @@ export class BuiltInPipes {
     { id: 1, name: 'Yan', age: 33 },
   ];
   currentDate: Date = new Date();
+
+  items = of([
+    { id: 1, name: 'Yan', age: 33 },
+    { id: 1, name: 'Yan', age: 33 },
+    { id: 1, name: 'Yan', age: 33 },
+  ]);
+  fruits = of(['apple', 'banana', 'cherry']);
 }
