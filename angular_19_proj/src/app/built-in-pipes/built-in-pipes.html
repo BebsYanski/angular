@@ -1,1 +1,35 @@
-<p>built-in-pipes works!</p>
+<div class="m-3">
+    <h3 class="text-primary m-3">String Type Pipes</h3>
+    <h4>1. UpperCasePipe: {{ angularPipes | uppercase }}</h4>
+    <h4>2. LowerCasePipe: {{ angularPipes | lowercase }}</h4>
+    <h4>3. TitleCasePipe: {{ angularPipes | titlecase }}</h4>
+    <h4>4. SlicePipe(4:8): {{ angularPipes | slice : 4 : 8 }}</h4>
+    <h4>4. SlicePipe(4): {{ angularPipes | slice : 4 }}</h4>
+    <h4>4. SlicePipe(4:-10): {{ angularPipes | slice : 4 : -10 }}</h4>
+    <h4>4. SlicePipe(-10): {{ angularPipes | slice : -10 }}</h4>
+    <h4>4. SlicePipe(-10): {{ [1, 2, 3, 4, 5, 6] | slice : 1 : 3 }}</h4>
+    <h4>4. SlicePipe(-10): {{ [1, 2, 3, 4, 5, 6] | slice : 1 : 3 }}</h4>
+    <h4>5. JsonPipe: {{ personData | json }}</h4>
+    <pre>5. JsonPipe: {{ personData | json }}</pre>
+    <pre>5. JsonPipe: {{ students | json }}</pre>
+    <hr />
+    <h3 class="text-primary m-3">Number Type Pipes</h3>
+    <h4>6. DatePipes: {{ currentDate }}</h4>
+    <h4>6. DatePipes: {{ currentDate | date }}</h4>
+
+    <h4>6. shortPipe: {{ currentDate | date : 'short' }}</h4>
+    <h4>6. shortDate: {{ currentDate | date : 'shortDate' }}</h4>
+    <h4>6. shortTime: {{ currentDate | date : 'shortTime' }}</h4>
+    <h4>6. mediumPipes: {{ currentDate | date : 'medium' }}</h4>
+    <h4>6. mediumDate: {{ currentDate | date : 'mediumDate' }}</h4>
+    <h4>6. mediumTime: {{ currentDate | date : 'mediumTime' }}</h4>
+    <h4>6. Time: {{ currentDate | date : 'time' }}</h4>
+    <h4>6. long: {{ currentDate | date : 'long' }}</h4>
+    <h4>6. longDate: {{ currentDate | date : 'longDate' }}</h4>
+    <h4>6. longTime: {{ currentDate | date : 'longTime' }}</h4>
+    <p [innerText]="currentDate"></p>
+
+    <h4>7. DecimalPipe: {{ 3.141592653 | number : '' }}</h4>
+    <h4>7. DecimalPipe: {{ 3.141592653 | number : '' }}</h4>
+    <h4>7. DecimalPipe: {{ 3.141592653 | number : '' }}</h4>
+</div>
