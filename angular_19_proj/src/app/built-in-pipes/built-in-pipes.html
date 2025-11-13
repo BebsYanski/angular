@@ -1,4 +1,10 @@
 <div class="m-3">
+  <!-- <h6>Mobile Number: {{ mobileNumber | custom }}</h6> -->
+  <!-- <h6>Mobile Number: {{ mobileNumber | custom : true }}</h6> -->
+  <h6>CustomizedDate: {{ currentDate | custom }}</h6>
+  <h6>Pure Pipe: Square of 5 is {{ 5 | pure }}</h6>
+  <h6>Impure Pipe: {{ 7 | impure }}</h6>
+
   <h3 class="text-primary m-3">String Type Pipes</h3>
   <h4>1. UpperCasePipe: {{ angularPipes | uppercase }}</h4>
   <h4>2. LowerCasePipe: {{ angularPipes | lowercase }}</h4>
